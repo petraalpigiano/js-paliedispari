@@ -20,6 +20,11 @@ const sumPcUserNumber = userNumber + generateRandomNumber(5);
 console.log("somma numeri:", sumPcUserNumber);
 
 // SVOLGIMENTO
+/**
+ *
+ * @param {number} sumPcUserNumber somma tra due numeri
+ * @returns {boolean} se la somma è pari
+ */
 function isSumEven(sumPcUserNumber) {
   if (sumPcUserNumber % 2 === 0) {
     return true;
@@ -27,10 +32,19 @@ function isSumEven(sumPcUserNumber) {
     return false;
   }
 }
-// OUTPUT
 console.log("La somma è pari:", isSumEven(sumPcUserNumber));
 
-// console.log("Utente ha vinto");&& userEvenOrOdd === "pari"&& userEvenOrOdd === "dispari"
-//   alert("Utente ha vinto");(sumPcUserNumber % 2 === 1)
-//   console.log("Pc ha vinto");
-//   alert("Pc ha vinto");
+if (isSumEven(sumPcUserNumber) === true && userEvenOrOdd === "pari") {
+  console.log("Utente ha vinto");
+  alert("Utente ha vinto");
+} else if (
+  isSumEven(sumPcUserNumber) === false &&
+  userEvenOrOdd === "dispari"
+) {
+  console.log("Utente ha vinto");
+  alert("Utente ha vinto");
+} else {
+  console.log("Pc ha vinto");
+  alert("Pc ha vinto");
+}
+// OUTPUT
