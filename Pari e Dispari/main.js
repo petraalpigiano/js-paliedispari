@@ -6,9 +6,9 @@ console.log("utente numero tra 1 e 5:", userNumber);
 
 /**
  *
- * @param {number} max
- * @param {number} min
- * @returns {number}
+ * @param {number} max numero massimo del range
+ * @param {number} min numero minimo del range (default 1)
+ * @returns {number} numero casuale del range
  */
 function generateRandomNumber(max, min = 1) {
   const pcNumber = Math.floor(Math.random() * (max - min + 1)) + min;
@@ -20,14 +20,17 @@ const sumPcUserNumber = userNumber + generateRandomNumber(5);
 console.log("somma numeri:", sumPcUserNumber);
 
 // SVOLGIMENTO
-if (sumPcUserNumber % 2 === 0 && userEvenOrOdd === "pari") {
-  console.log("Utente ha vinto");
-  alert("Utente ha vinto");
-} else if (sumPcUserNumber % 2 === 1 && userEvenOrOdd === "dispari") {
-  console.log("Utente ha vinto");
-  alert("Utente ha vinto");
-} else {
-  console.log("Pc ha vinto");
-  alert("Pc ha vinto");
+function isSumEven(sumPcUserNumber) {
+  if (sumPcUserNumber % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
 // OUTPUT
+console.log("La somma è pari:", isSumEven(sumPcUserNumber));
+
+// console.log("Utente ha vinto");&& userEvenOrOdd === "pari"&& userEvenOrOdd === "dispari"
+//   alert("Utente ha vinto");(sumPcUserNumber % 2 === 1)
+//   console.log("Pc ha vinto");
+//   alert("Pc ha vinto");
