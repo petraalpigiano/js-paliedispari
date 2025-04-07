@@ -1,10 +1,17 @@
 // RACCOLTA DATI
 const userWord = prompt("Inserisci una parola", "cipolla");
-const wordLetter = [];
+let wordReverse = "";
 for (let i = 0; i < userWord.length; i++) {
-  const currentWord = userWord[i];
-  wordLetter.unshift(currentWord);
-  console.log(wordLetter);
+  const currentCharacter = userWord[i];
+  wordReverse = currentCharacter + wordReverse;
+}
+
+if (userWord === wordReverse) {
+  console.log(wordReverse, ":", "La parola è palindroma");
+  alert("La parola è palindroma");
+} else {
+  console.log(wordReverse, ":", "La parola non è palindroma");
+  alert("La parola non è palindroma");
 }
 
 // SVOLGIMENTO
